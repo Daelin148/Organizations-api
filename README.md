@@ -10,3 +10,6 @@ cp .env.example .env
 ```
 docker compose -f 'docker-compose.yml' up -d --build
 ```
+
+Документация доступна по адресу: /docs
+Api-ключ лежит в .env.example
