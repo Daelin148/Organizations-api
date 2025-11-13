@@ -6,9 +6,9 @@
 ```
 cp .env.example .env
 ```
-- Запустить docker-compose.yml
+- Запустить start.sh
 ```
-docker compose -f 'docker-compose.yml' up -d --build
+./start.sh
 ```
 
 Документация доступна по адресу: /docs
