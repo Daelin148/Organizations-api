@@ -14,6 +14,11 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    command: >
+      sh -c "
+        find /var/lib/postgresql/ -name '.gitkeep' -type f -delete 2>/dev/null || true &&
+        exec docker-entrypoint.sh postgres
+      "
 
   backend:
     container_name: organizations-backend
