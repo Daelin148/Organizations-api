@@ -8,16 +8,14 @@ from fastapi import FastAPI
 async def apply_migrations(app: FastAPI):
     print("Применяем миграции...")
     try:
-        result = subprocess.run(
+        subprocess.run(
             ['alembic', '-c', '/app/app/alembic.ini', 'upgrade', 'head'],
             capture_output=True,
             text=True,
             check=True,
             cwd='/app'
         )
-    except subprocess.CalledProcessError as e:
-        print("STDOUT:", e.stdout)
-        print("STDERR:", e.stderr)
+    except subprocess.CalledProcessError:
         raise
     print("Миграции успешно применены")
     yield

@@ -115,8 +115,12 @@ class OrganizationService:
         self, uow: UnitOfWork, lon: float, lat: float, radius: float
     ) -> list[OrganizationRead]:
         async with uow:
-            building_ids = await uow.buildings.get_with_radius_ids(lon, lat, radius)
-            organizations = await uow.organizations.filter_by_buildings_id(building_ids)
+            building_ids = await uow.buildings.get_with_radius_ids(
+                lon, lat, radius
+            )
+            organizations = await uow.organizations.filter_by_buildings_id(
+                building_ids
+            )
             if not organizations:
                 if not organizations:
                     raise HTTPException(

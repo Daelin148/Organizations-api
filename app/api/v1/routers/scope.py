@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Query, status
+from fastapi import APIRouter, status
 
 from api.v1.dependencies import UOWDep
 from schemas import ScopeBase, ScopeOrganizations, ScopeRead

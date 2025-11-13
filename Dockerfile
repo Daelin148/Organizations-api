@@ -7,7 +7,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN mkdir -p ../postgres_data
+RUN mkdir -p ./postgres_data
 
 WORKDIR /app/app
 

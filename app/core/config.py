@@ -1,7 +1,6 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
-
 from pathlib import Path
 
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BASE_DIR = Path(__file__).parent.parent.parent
 
@@ -12,6 +11,7 @@ class Settings(BaseSettings):
     postgres_db: str
     postgres_user: str
     postgres_password: str
+    api_key: str
 
     model_config = SettingsConfigDict(
         env_file=BASE_DIR / '.env',

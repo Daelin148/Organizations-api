@@ -21,7 +21,9 @@ class ScopeService:
         async with uow:
             parent_scope_id = scope_data.parent_id
             if parent_scope_id is not None:
-                parent_scope = await uow.scopes.get_one(id=scope_data.parent_id)
+                parent_scope = await uow.scopes.get_one(
+                    id=scope_data.parent_id
+                )
                 if not parent_scope:
                     raise HTTPException(
                         status_code=status.HTTP_404_NOT_FOUND,

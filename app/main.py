@@ -7,7 +7,6 @@ from utils.exception_handlers import handle_integrity_error
 from sqlalchemy.exc import IntegrityError
 
 
-
 app = FastAPI(
     title=settings.app_name,
     lifespan=apply_migrations

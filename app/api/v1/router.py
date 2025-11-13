@@ -1,8 +1,9 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 
 from api.v1.routers import building, organizations, phone, scope
+from utils.keys import verify_api_key
 
-api_router = APIRouter()
+api_router = APIRouter(dependencies=([Depends(verify_api_key)]))
 
 api_router.include_router(
     organizations.router,
