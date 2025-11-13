@@ -1,7 +1,8 @@
-from models import Scope
-from utils.unitofwork import UnitOfWork
 from fastapi import HTTPException, status
-from schemas import ScopeBase, ScopeRead, ScopeOrganizations
+
+from models import Scope
+from schemas import ScopeBase, ScopeOrganizations, ScopeRead
+from utils.unitofwork import UnitOfWork
 
 
 class ScopeService:

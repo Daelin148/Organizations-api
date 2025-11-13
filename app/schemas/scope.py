@@ -1,8 +1,8 @@
-from . import BaseSchema
-
 from typing import Annotated
 
-from pydantic import Field, BaseModel
+from pydantic import BaseModel, Field
+
+from . import BaseSchema
 
 
 class ScopeBase(BaseModel):

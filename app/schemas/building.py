@@ -1,8 +1,8 @@
-from .base import BaseSchema
-
-from pydantic import Field, BaseModel, computed_field
-
 from typing import Annotated
+
+from pydantic import BaseModel, Field, computed_field
+
+from .base import BaseSchema
 
 
 class BuildingBase(BaseModel):

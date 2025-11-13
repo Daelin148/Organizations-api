@@ -1,8 +1,8 @@
-from . import BaseSchema
-
-from pydantic import Field, BaseModel
-
 from typing import Annotated
+
+from pydantic import BaseModel, Field
+
+from . import BaseSchema
 
 
 class PhoneBase(BaseModel):

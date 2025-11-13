@@ -1,8 +1,9 @@
-from sqlalchemy import select
-from sqlalchemy import Select
-from sqlalchemy.orm import selectinload, joinedload
+from sqlalchemy import Select, select
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import joinedload, selectinload
+
 from models import Organization, Scope
+
 from .base import BaseRepository
 
 

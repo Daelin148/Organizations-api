@@ -1,7 +1,5 @@
-from sqlalchemy import Table, ForeignKey, Column, Integer
-
 from core.db import Base
-
+from sqlalchemy import Column, ForeignKey, Integer, Table
 
 organization_scope = Table(
     'organization_scope',

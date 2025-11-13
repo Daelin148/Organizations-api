@@ -1,11 +1,8 @@
-from fastapi import APIRouter, status, Query
+from fastapi import APIRouter, Query, status
 
 from api.v1.dependencies import UOWDep
-from schemas import (
-    ScopeBase, ScopeRead, ScopeOrganizations
-)
+from schemas import ScopeBase, ScopeOrganizations, ScopeRead
 from services import ScopeService
-
 
 router = APIRouter()
 

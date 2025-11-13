@@ -1,5 +1,6 @@
 from fastapi import APIRouter
-from api.v1.routers import organizations, scope, building, phone
+
+from api.v1.routers import building, organizations, phone, scope
 
 api_router = APIRouter()
 

@@ -1,6 +1,7 @@
-from contextlib import asynccontextmanager
-from fastapi import FastAPI
 import subprocess
+from contextlib import asynccontextmanager
+
+from fastapi import FastAPI
 
 
 @asynccontextmanager

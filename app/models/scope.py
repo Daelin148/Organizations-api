@@ -1,8 +1,8 @@
-from sqlalchemy import String, ForeignKey, UniqueConstraint
-from sqlalchemy.orm import Mapped, mapped_column, relationship
 from typing import Optional
 
 from core.db import Base
+from sqlalchemy import ForeignKey, String, UniqueConstraint
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 
 class Scope(Base):

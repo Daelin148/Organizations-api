@@ -1,7 +1,8 @@
+from fastapi import HTTPException, status
+
 from models import Organization
 from schemas.organization import OrganizationCreate, OrganizationRead
 from utils.unitofwork import UnitOfWork
-from fastapi import HTTPException, status
 
 
 class OrganizationService:

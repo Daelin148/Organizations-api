@@ -1,10 +1,10 @@
+from typing import Annotated
+
+from pydantic import BaseModel, Field
+
 from .base import BaseSchema
 from .phone import PhoneRead
 from .scope import ScopeRead
-
-from pydantic import Field, BaseModel
-
-from typing import Annotated
 
 
 class OrganizationCreate(BaseModel):

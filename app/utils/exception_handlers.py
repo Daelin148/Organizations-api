@@ -1,5 +1,5 @@
-from fastapi.responses import JSONResponse
 from asyncpg.exceptions import UniqueViolationError
+from fastapi.responses import JSONResponse
 
 
 async def handle_integrity_error(request, exc):

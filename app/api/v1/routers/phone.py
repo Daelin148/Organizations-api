@@ -4,7 +4,6 @@ from api.v1.dependencies import UOWDep
 from schemas import PhoneRead
 from services import PhoneService
 
-
 router = APIRouter()
 
 

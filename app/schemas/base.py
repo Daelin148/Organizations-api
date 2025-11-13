@@ -1,6 +1,6 @@
-from pydantic import BaseModel
 from typing import Annotated
-from pydantic import Field
+
+from pydantic import BaseModel, Field
 
 
 class BaseSchema(BaseModel):

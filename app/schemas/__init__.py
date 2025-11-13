@@ -1,11 +1,9 @@
-from .building import (
-    BuildingBase, BuildingRead, BuildingCreate, BuildingOrganizations
-)
 from .base import BaseSchema
+from .building import (BuildingBase, BuildingCreate, BuildingOrganizations,
+                       BuildingRead)
 from .organization import OrganizationRead
 from .phone import PhoneBase, PhoneRead
-from .scope import ScopeBase, ScopeRead, ScopeOrganizations
-
+from .scope import ScopeBase, ScopeOrganizations, ScopeRead
 
 __all__ = [
     'BaseSchema',

@@ -1,5 +1,6 @@
 from core.db import AsyncSessionLocal
-from crud import ScopeRepository, OrganizationRepository, BuildingRepository, PhoneRepository
+from crud import (BuildingRepository, OrganizationRepository, PhoneRepository,
+                  ScopeRepository)
 
 
 class UnitOfWork:

@@ -1,11 +1,9 @@
-from typing import List, Optional
+from typing import List
+
 from fastapi import APIRouter, Query, status
 
 from api.v1.dependencies import UOWDep
-from schemas.organization import (
-    OrganizationRead, OrganizationCreate
-)
-
+from schemas.organization import OrganizationCreate, OrganizationRead
 from services import OrganizationService
 
 router = APIRouter()

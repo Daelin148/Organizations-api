@@ -1,9 +1,9 @@
-from typing import TypeVar, Generic, Type
 from abc import ABC, abstractmethod
+from typing import Generic, Type, TypeVar
+
 from sqlalchemy import Select, insert
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm.decl_api import DeclarativeMeta
-
 
 T = TypeVar('T', bound=DeclarativeMeta)
 

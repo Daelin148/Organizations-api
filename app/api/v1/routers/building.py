@@ -1,9 +1,8 @@
 from fastapi import APIRouter, status
 
 from api.v1.dependencies import UOWDep
-from schemas import BuildingRead, BuildingCreate, BuildingOrganizations
+from schemas import BuildingCreate, BuildingOrganizations, BuildingRead
 from services import BuildingService
-
 
 router = APIRouter()
 

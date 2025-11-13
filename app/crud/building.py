@@ -1,10 +1,11 @@
-from sqlalchemy import select, Select
-from sqlalchemy.orm import selectinload
+from geoalchemy2 import WKTElement
+from geoalchemy2.functions import ST_DWithin, ST_GeomFromText
+from sqlalchemy import Select, select
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import selectinload
+
 from crud.base import BaseRepository
 from models import Building
-from geoalchemy2.functions import ST_DWithin, ST_GeomFromText
-from geoalchemy2 import WKTElement
 
 
 class BuildingRepository(BaseRepository[Building]):

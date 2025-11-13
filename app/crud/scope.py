@@ -1,8 +1,10 @@
-from sqlalchemy import select, Select
-from sqlalchemy.orm import selectinload, joinedload, aliased
+from sqlalchemy import Select, select
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import aliased, joinedload, selectinload
+
+from models import Organization, Scope
+
 from .base import BaseRepository
-from models import Scope, Organization
 
 
 class ScopeRepository(BaseRepository[Scope]):
