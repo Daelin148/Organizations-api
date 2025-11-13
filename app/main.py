@@ -22,3 +22,8 @@ app.add_middleware(
 app.include_router(api_router, prefix='/api/v1')
 
 app.add_exception_handler(IntegrityError, handle_integrity_error)
+
+
+@app.get('/')
+async def main():
+    return 'Тестовое задание в Secunda'
