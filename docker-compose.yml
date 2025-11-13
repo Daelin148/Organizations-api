@@ -1,0 +1,27 @@
+services:
+  db:
+    container_name: organizations-db
+    image: postgis/postgis:18-3.6-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    env_file: .env
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  backend:
+    container_name: organizations-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    env_file: .env
+    ports:
+      - 9090:9090
+    expose:
+      - 9090
+    depends_on:
+      - db
+
+volumes:
+  db_data:
