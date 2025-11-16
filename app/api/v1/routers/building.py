@@ -12,9 +12,8 @@ async def get_buildings(
     uow: UOWDep
 ) -> list[BuildingRead]:
     """Вывод информации о зданиях."""
-    async with uow:
-        buildings = await BuildingService().get_buildings(uow)
-        return buildings
+    buildings = await BuildingService().get_buildings(uow)
+    return buildings
 
 
 @router.post(
@@ -25,9 +24,8 @@ async def create_scope(
     scope_data: BuildingCreate
 ) -> BuildingRead:
     """Создание здания."""
-    async with uow:
-        building = await BuildingService().create_building(uow, scope_data)
-        return building
+    building = await BuildingService().create_building(uow, scope_data)
+    return building
 
 
 @router.get(

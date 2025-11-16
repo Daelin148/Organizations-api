@@ -12,6 +12,5 @@ async def get_phones(
     uow: UOWDep
 ) -> list[PhoneRead]:
     """Вывод информации о телефонах."""
-    async with uow:
-        phones = await PhoneService().get_phones(uow)
-        return phones
+    phones = await PhoneService().get_phones(uow)
+    return phones

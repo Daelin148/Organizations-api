@@ -12,9 +12,8 @@ async def get_scopes(
     uow: UOWDep
 ) -> list[ScopeRead]:
     """Вывод информации о видах деятельности."""
-    async with uow:
-        scopes = await ScopeService().get_all_scopes(uow)
-        return scopes
+    scopes = await ScopeService().get_all_scopes(uow)
+    return scopes
 
 
 @router.post(
@@ -25,9 +24,8 @@ async def create_scope(
     scope_data: ScopeBase
 ) -> ScopeRead:
     """Создание вида деятельности."""
-    async with uow:
-        scope = await ScopeService().create_scope(uow, scope_data)
-        return scope
+    scope = await ScopeService().create_scope(uow, scope_data)
+    return scope
 
 
 @router.get(
